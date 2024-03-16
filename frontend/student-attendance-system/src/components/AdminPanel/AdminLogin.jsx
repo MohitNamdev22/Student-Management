@@ -1,34 +1,33 @@
 import React, { useState } from 'react';
 import axios from 'axios';
-import '../AdminPanel/AdminLogin.css'
+import '../AdminPanel/AdminLogin.css';
 
 const AdminLogin = () => {
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
-    const [error, setError] = useState('');
+    const [loginStatus, setLoginStatus] = useState('');
+    const [errorMessage, setErrorMessage] = useState('');
 
     const handleLogin = async (e) => {
         e.preventDefault();
-        console.log("before try bloack")
         try {
-            // Make HTTP POST request to backend API for admin login
             const response = await axios.post('http://localhost:3000/admin/login', {
                 email,
                 password
             });
-            // Handle successful login
             console.log('Login successful:', response.data);
+            setLoginStatus('success');
         } catch (error) {
-            // Handle login error
             console.error('Login error:', error.response.data.error);
-            setError(error.response.data.error);
+            setErrorMessage(error.response.data.error);
+            setLoginStatus('failure');
         }
     };
 
     return (
         <div className="admin-login-container">
             <h2>Admin Login</h2>
-            {error && <p className="error-message">{error}</p>}
+            {loginStatus === 'failure' && <p className="error-message">{errorMessage}</p>}
             <form onSubmit={handleLogin}>
                 <div className="form-group">
                     <label>Email:</label>
@@ -40,6 +39,7 @@ const AdminLogin = () => {
                 </div>
                 <button type="submit" className="btn-login">Login</button>
             </form>
+            {loginStatus === 'success' && <p className="success-message">Login successful</p>}
         </div>
     );
 };
