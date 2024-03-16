@@ -1,0 +1,21 @@
+[
+  {
+    "id": 1,
+    "name": "John Doe",
+    "email": "john@example.com",
+    "password": "password123"
+  },
+  {
+    "id": 2,
+    "name": "Jane Smith",
+    "email": "jane@example.com",
+    "password": "pass456"
+  },
+  {
+    "id": 1710557421746,
+    "name": "Mohit Namdev",
+    "email": "namdevmohit0@gmail.com",
+    "mobile": 8770847520,
+    "password": "mohit@2003"
+  }
+]

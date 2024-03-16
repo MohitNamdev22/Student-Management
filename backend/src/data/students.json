@@ -1,0 +1,21 @@
+[
+  {
+    "id": 1,
+    "name": "Alice",
+    "rollNumber": "S001",
+    "age": 20,
+    "class": "10th"
+  },
+  {
+    "id": 2,
+    "name": "Bob",
+    "rollNumber": "S002",
+    "age": 19,
+    "class": "12th"
+  },
+  {
+    "id": 1710530908702,
+    "name": "Mohit",
+    "grade": "A"
+  }
+]

@@ -1,0 +1,15 @@
+[
+    {
+      "id": 1,
+      "studentId": 1,
+      "date": "2024-03-15",
+      "status": "present"
+    },
+    {
+      "id": 2,
+      "studentId": 2,
+      "date": "2024-03-15",
+      "status": "absent"
+    }
+  ]
+  
