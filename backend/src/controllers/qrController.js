@@ -1,6 +1,9 @@
 const express = require('express');
 const router = express.Router();
+const cors = require('cors');
 
+const app = express();
+app.use(cors());
 // QR Code Authentication Route
 router.post('/authenticate', (req, res) => {
     const { qrCode } = req.body;

@@ -2,10 +2,12 @@ const express = require('express');
 const router = express.Router();
 const fs = require('fs');
 const path = require('path');
+const cors = require('cors');
 
 // Define the path to the JSON file where student data will be stored
 const studentDataPath = path.join(__dirname, '../data/students.json');
-
+const app = express();
+app.use(cors());
 // Function to read JSON data from file
 const readDataFromFile = (filePath) => {
     try {
